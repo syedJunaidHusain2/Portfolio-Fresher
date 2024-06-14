@@ -1,0 +1,224 @@
+.Marquee-main {
+  padding: 120px 0;
+  background: #0f0715;
+  overflow: hidden !important;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 700px) {
+    padding: 50px 10px !important;
+  }
+  .Marquee-box {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 80%;
+    height: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #8750f7;
+    background: -o-linear-gradient(
+      190deg,
+      #8750f7 0%,
+      rgba(115, 67, 210, 0) 100%
+    );
+    background: linear-gradient(260deg, #8750f7 0%, rgba(115, 67, 210, 0) 100%);
+    filter: blur(150px);
+  }
+  @media (max-width: 1199px) {
+    padding: 50px 0;
+  }
+
+  .skill-main {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap; // Allow items to wrap to the next row
+
+    .skill-item {
+      max-width: 180px; /* 3 items in a row */
+      width: 100%; /* 3 items in a row */
+      text-align: center;
+      padding: 5rem 0;
+
+      @media (max-width: 950px) {
+        max-width: calc(50% - 1rem); /* 2 items in a row */
+        width: calc(50% - 1rem); /* 2 items in a row */
+        padding: 0.5rem 0;
+      }
+
+      @media (max-width: 700px) {
+        max-width: calc(50% - 1rem); /* 2 items in a row */
+        width: calc(50% - 1rem); /* 2 items in a row */
+        padding: 2rem 0;
+        padding: 0.5rem 0;
+      }
+
+      @media (max-width: 450px) {
+        max-width: calc(100% - 1rem); /* 1 item in a row */
+        width: calc(100% - 1rem); /* 1 item in a row */
+        padding: 0.5rem 0;
+      }
+
+      .skill-inner {
+        border-radius: 25px;
+        padding: 40px 15px 30px;
+        background: #140c1c;
+        border: 1px solid transparent;
+        margin-bottom: 15px;
+        transition: 0.6s;
+        letter-spacing: 0.7px;
+
+        &:hover {
+          background-color: rgba(57, 0, 110, 0.829);
+          border: 2px solid rgb(103, 0, 199);
+        }
+
+        &:hover .icon-box svg {
+          filter: grayscale(0);
+          transform: scale(1.1);
+        }
+
+        &:hover .number {
+          color: #8750f7;
+        }
+
+        .icon-box {
+          max-width: 60px;
+          width: 100%;
+          margin: 0 auto 30px;
+
+          svg {
+            filter: grayscale(90%);
+            transition: 0.3s;
+            font-size: 3.5rem;
+            color: #747779;
+          }
+        }
+
+        .number {
+          color: #747779;
+          font-weight: 800;
+          font-size: 23px;
+          line-height: 1;
+        }
+      }
+
+      p {
+        color: #8750f7;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .logos {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 30%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        to right,
+        hsl(215.75deg 20.16% 7.73%) 0%,
+        rgba(0, 0, 0, 0) 99%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 1%,
+        rgb(16 21 27) 98%
+      );
+    }
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+
+  .logos2::before,
+  .logos2::after {
+    background: transparent !important;
+  }
+
+  .logos-slide {
+    display: flex;
+    animation: slide 60s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .marquee__content {
+      display: flex;
+      justify-content: space-around;
+      min-width: 100%;
+      align-items: center;
+      padding-top: 40px;
+    }
+  }
+
+  .marquee-img-main {
+    border: 1px solid #636363ca;
+    padding: 0 52px;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 60px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    font-size: 3rem;
+    color: #fff;
+    position: relative;
+
+    h5 {
+      position: absolute;
+      top: -25px;
+      color: #e2e2e2;
+    }
+    .skill-info {
+      text-align: center;
+      margin-top: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+
+      .skill-name {
+        font-size: 1.1rem;
+        color: #8d8b93;
+        margin-top: 5px;
+      }
+    }
+  }
+}

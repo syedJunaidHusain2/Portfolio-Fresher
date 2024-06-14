@@ -1,0 +1,118 @@
+.footer-section {
+    background-color: #050709;
+    padding-top: 60px;
+    padding-bottom: 25px;
+    text-align: center !important;
+  
+    @media (max-width: 768px) {
+      padding-top: 40px;
+    }
+  
+    .footer-box {
+      max-width: 1320px;
+      margin: 0 auto;
+      color: white;
+      padding: 0 20px;
+  
+      .navbar__logo {
+        img {
+          width: 5rem;
+          max-width: 100%;
+          padding-bottom: 1rem;
+  
+          @media (max-width: 768px) {
+            padding-bottom: 0.5rem;
+          }
+  
+          @media (max-width: 576px) {
+            width: 4rem;
+          }
+        }
+      }
+  
+      .link-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 1.8rem 0;
+        flex-wrap: wrap;
+  
+        @media (max-width: 768px) {
+          gap: 1.5rem;
+        }
+  
+        @media (max-width: 576px) {
+          gap: 1rem;
+        }
+  
+        p {
+          position: relative;
+          transition: color 0.3s ease;
+          cursor: pointer;
+          font-family: "Sora", sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+  
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            border-radius: 10px;
+            background: linear-gradient(
+              10deg,
+              #8750f7 0%,
+              rgba(115, 67, 210, 0.389) 100%
+            );
+            transition: width 0.3s ease;
+          }
+  
+          &.active {
+            color: #8750f7;
+  
+            &::after {
+              width: 100%;
+            }
+          }
+  
+          &:hover {
+  
+            &::after {
+              width: 100%;
+            }
+          }
+  
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+  
+          @media (max-width: 576px) {
+            font-size: 13px;
+          }
+        }
+      }
+  
+      .disc {
+        color: #8750f7;
+        margin-top: 1rem;
+  
+        span {
+          font-weight: 700;
+        }
+  
+        @media (max-width: 768px) {
+          font-size: 14px;
+        margin-top: 0;
+
+        }
+  
+        @media (max-width: 576px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  
