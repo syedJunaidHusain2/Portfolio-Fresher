@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ImWhatsapp } from "react-icons/im";
 import whatsappBtn from "../../utils/whatsapBtn/index";
 import EmailBtn from "../../utils/emailBtn";
-import girl from "../../assets/images/girl.png";
+import girl from "../../assets/images/junnu.png";
 import RightFirst from "./right-container/right-first";
 import RightSec from "./right-container/right-sec";
 import RightThird from "./right-container/right-third";
@@ -18,6 +18,8 @@ const Hero = () => {
     <section className="hero-section" id="hero">
       <div className="main-container">
         <div className="collapse-div">
+
+{/* --------------------- Left Section --------------------- */}
           <div className="left-box">
             <img src={arrow} alt="" />
             <ul className="wrapper">
@@ -52,7 +54,7 @@ const Hero = () => {
             </ul>
             <img src={arrowbttm} alt="" />
           </div>
-
+{/* --------------------- Middle Section --------------------- */}
           <div className="middle">
             <div className="heading main-text">
               <p className="animate__animated animate__fadeInDown  animate__slow 0.1s">
