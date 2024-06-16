@@ -21,7 +21,7 @@ const RightFirst = () => {
       >
         {({ countUpRef }) => (
           <h1 className="animate__animated animate__fadeInRight animate__slow 0.1s">
-            <span ref={countUpRef} />
+            13+
           </h1>
         )}
       </CountUp>
